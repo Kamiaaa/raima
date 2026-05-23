@@ -119,7 +119,7 @@ const AboutPage = () => {
                 <FaBolt className="w-4 h-4" />
                 Your Journey, Our Passion
               </div>
-              <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-source text-white max-w-6xl z-10">
                 About <span className="text-orange-200">Raima Travel</span>
               </h1>
 
