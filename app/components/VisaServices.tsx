@@ -61,13 +61,13 @@ const VisaServices: React.FC = () => {
     {
       country: "Thailand",
       description: "Thailand Visa For Bangladesh - Application & Requirements",
-      price: "৳8,000",
+      price: "৳6,000",
       bgImage: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&h=500&fit=crop"
     },
     {
       country: "Australia",
       description: "Australia Tourist Visa Requirements For Bangladesh",
-      price: "৳30,000",
+      price: "৳60,000",
       bgImage: "https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&h=500&fit=crop"
     },
     {
