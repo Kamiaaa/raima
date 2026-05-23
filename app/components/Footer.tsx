@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
               <div className="flex items-center space-x-3 relative">
                 <div className="relative">
                   <div className="absolute inset-0 bg-orange-600/30 rounded-full blur-sm"></div>
-                  <div className="w-20 h-20 relative overflow-hidden z-10 flex items-center justify-center">
-                    <Image src={'/img/logo.png'} alt='Raima Travel Logo' fill priority className="text-white text-2xl" />
+                  <div className="w-40 h-auto relative overflow-hidden z-10 flex items-center justify-center">
+                    {/* <Image src={'/img/logo.png'} alt='Raima Travel Logo' fill priority className="text-white text-2xl" /> */}
                   </div>
                 </div>
                 <div>
