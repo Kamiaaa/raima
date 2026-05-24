@@ -9,10 +9,10 @@ const Footer: React.FC = () => {
       <div className="absolute inset-0 z-0">
         {/* Dark gradient overlay - Travel themed colors */}
         <div className="absolute inset-0 bg-linear-to-t from-slate-900/95 via-slate-800/90 to-orange-900/85"></div>
-        
+
         {/* Subtle pattern overlay - Travel inspired */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]"></div>
-        
+
         {/* Subtle vignette effect */}
         <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent"></div>
       </div>
@@ -37,11 +37,11 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <p className="text-gray-200 text-lg leading-relaxed max-w-2xl drop-shadow-md backdrop-blur-sm bg-black/20 rounded-xl p-4 font-poppins">
-            Raima Travel is your trusted partner for unforgettable journeys across Bangladesh and beyond. 
-            From the world's longest sea beach at Cox's Bazar to the lush green hills of Sajek Valley, 
-            we craft personalized travel experiences that create lasting memories. Explore with comfort, 
+            Raima Travel is your trusted partner for unforgettable journeys across Bangladesh and beyond.
+            From the world's longest sea beach at Cox's Bazar to the lush green hills of Sajek Valley,
+            we craft personalized travel experiences that create lasting memories. Explore with comfort,
             safety, and authentic local experiences.
           </p>
 
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
             Contact Us
             <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-linear-to-r from-orange-500 to-transparent"></span>
           </h3>
-          
+
           <div className="space-y-4">
             <div className="flex items-start gap-4 group cursor-pointer backdrop-blur-sm hover:bg-black/20 rounded-xl p-3 -m-3 transition-all duration-300">
               <div className="p-3 bg-gray-900/80 backdrop-blur-sm rounded-xl group-hover:bg-orange-700/40 transition-all duration-300 border border-gray-700/50 group-hover:border-orange-500/40 min-w-12">
@@ -108,7 +108,9 @@ const Footer: React.FC = () => {
               </div>
               <div className="text-gray-200 leading-relaxed">
                 <a href='https://maps.app.goo.gl/' target='_blank' rel="noopener noreferrer" className="group/link">
-                  <p className="group-hover/link:text-gray-300 transition-colors drop-shadow font-poppins">Gulshan Avenue, Dhaka - 1212</p>
+                  <p className="group-hover/link:text-gray-300 transition-colors drop-shadow font-poppins">Police Plaza Concord, Tower-02
+                    (7th Floor) Plot # 02 Road # 144,
+                    Gulshan-1 Dhaka 1212, Bangladesh.</p>
                 </a>
                 <a href='https://maps.app.goo.gl/' target='_blank' rel="noopener noreferrer" className="group/link mt-2 block">
                   <p className="group-hover/link:text-gray-300 transition-colors drop-shadow text-sm font-poppins">Travel Hub, Cox's Bazar - 4700</p>
@@ -198,7 +200,7 @@ const Footer: React.FC = () => {
               &copy; {new Date().getFullYear()} Raima Travel. All rights reserved. | Crafting Unforgettable Journeys
             </p>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 backdrop-blur-sm bg-black/20 rounded-xl p-4 md:p-2">
             <Link href="/privacy" className="text-gray-300 hover:text-gray-100 transition-colors text-sm font-medium relative group drop-shadow font-poppins">
               Privacy Policy
