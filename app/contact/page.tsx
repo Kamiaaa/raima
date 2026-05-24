@@ -20,14 +20,14 @@ const ContactPage = () => {
     {
       icon: FaEnvelope,
       title: 'Email Us',
-      details: 'info@a1communications.com',
+      details: 'info@raimatravel.com.bd',
       description: 'Send us an email anytime',
       color: 'from-orange-500 to-orange-700'
     },
     {
       icon: FaPhone,
       title: 'Call Us',
-      details: '+8801730068845, +8801730068845',
+      details: '+8801730068845, +880255045262',
       description: 'Sat-Thurs from 9am to 6pm',
       color: 'from-orange-500 to-orange-700'
     },
