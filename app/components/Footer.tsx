@@ -197,7 +197,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left backdrop-blur-sm bg-black/20 rounded-xl p-4 md:p-2">
             <p className="text-gray-200 text-sm drop-shadow font-poppins">
-              &copy; {new Date().getFullYear()} Raima Travel. All rights reserved. | Crafting Unforgettable Journeys
+              &copy; {new Date().getFullYear()} Raima International Travel. All rights reserved. | Crafting Unforgettable Journeys
             </p>
           </div>
 
