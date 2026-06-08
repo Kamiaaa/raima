@@ -159,7 +159,7 @@ const AboutPage = () => {
               </h2>
               <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mb-4 sm:mb-6" />
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                Founded in 2025, <span className="font-semibold text-orange-600 dark:text-orange-400">Raima Travel International</span> was established with a vision to make global travel more accessible, inspiring, and unforgettable. Driven by a passion for exploration and excellence, we are committed to connecting travelers with the world's most remarkable destinations through personalized and professionally curated travel solutions.
+                Founded in 2025, <span className="font-semibold text-orange-600 dark:text-orange-400">Raima International Travel</span> was established with a vision to make global travel more accessible, inspiring, and unforgettable. Driven by a passion for exploration and excellence, we are committed to connecting travelers with the world's most remarkable destinations through personalized and professionally curated travel solutions.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                 From vibrant cultural capitals and iconic landmarks to pristine beaches and hidden gems, we design journeys that go beyond sightseeing. Every itinerary is thoughtfully crafted to deliver authentic experiences, meaningful connections, and lifelong memories.
