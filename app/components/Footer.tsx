@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
                 <FaPhoneAlt className="text-gray-300 text-lg" />
               </div>
               <div>
-                <p className="text-gray-200 group-hover:text-gray-300 transition-colors drop-shadow font-poppins">+880 1730068840</p>
+                <p className="text-gray-200 group-hover:text-gray-300 transition-colors drop-shadow font-poppins">+880 1730068845</p>
                 <p className="text-gray-300 text-sm drop-shadow font-poppins">24/7 Travel Support</p>
               </div>
             </div>
