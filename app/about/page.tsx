@@ -159,20 +159,19 @@ const AboutPage = () => {
               </h2>
               <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mb-4 sm:mb-6" />
               <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                Founded in 2008, <span className="font-semibold text-orange-600 dark:text-orange-400">Raima Travel International</span> began with a simple dream:
-                to connect people with the world's most breathtaking destinations through authentic,
-                carefully crafted travel experiences.
+                Founded in 2025, <span className="font-semibold text-orange-600 dark:text-orange-400">Raima Travel International</span> was established with a vision to make global travel more accessible, inspiring, and unforgettable. Driven by a passion for exploration and excellence, we are committed to connecting travelers with the world's most remarkable destinations through personalized and professionally curated travel solutions.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                What started as two passionate travelers sharing insider tips has grown into a
-                trusted travel company serving thousands of adventurers across the globe. From
-                the bustling markets of Marrakech to the serene beaches of Bali, we've curated
-                journeys that inspire and transform.
+                From vibrant cultural capitals and iconic landmarks to pristine beaches and hidden gems, we design journeys that go beyond sightseeing. Every itinerary is thoughtfully crafted to deliver authentic experiences, meaningful connections, and lifelong memories.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                But our success isn't measured in numbers — it's in the smiles, the memories,
-                and the stories our travelers bring home. We're not just booking trips; we're
-                crafting life-changing adventures.
+                Over the years, Raima International Travels has earned the trust of travelers by providing reliable, seamless, and customer-focused services. Whether it's leisure travel, business trips, group tours, visa assistance, or customized holiday packages, our experienced team ensures that every detail is handled with care and precision.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                At Raima International Travels, we believe that travel is more than a journey—it is an opportunity to discover new cultures, broaden perspectives, and create stories worth sharing. Our success is not measured by the number of destinations we offer, but by the satisfaction, happiness, and unforgettable experiences of the people we serve.
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                As we continue to grow, our mission remains the same: to inspire, connect, and empower travelers to explore the world with confidence and comfort.
               </p>
             </motion.div>
             

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowRight, FaLinkedinIn, FaPlane, FaHotel, FaUmbrellaBeach, FaHiking, FaCamera, FaClock } from 'react-icons/fa';
 
