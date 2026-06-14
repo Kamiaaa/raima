@@ -64,10 +64,10 @@ const Navbar = () => {
   const servicesDropdown: DropdownMenu = {
     name: 'Services',
     items: [
-      { name: 'Tours', href: '/bandwidth', icon: <Palmtree className="w-4 h-4" /> },
-      { name: 'Visa Service', href: '/data-connectivity', icon: <FileText className="w-4 h-4" /> },
+      { name: 'Tours', href: '/tours', icon: <Palmtree className="w-4 h-4" /> },
+      { name: 'Visa Service', href: '/visa-service', icon: <FileText className="w-4 h-4" /> },
       { name: 'Air Tickets', href: '/air-tickets', icon: <Plane className="w-4 h-4" /> },
-      { name: 'Umrah', href: '/data-center', icon: <MapPin className="w-4 h-4" /> },
+      { name: 'Umrah', href: '/umrah', icon: <MapPin className="w-4 h-4" /> },
     ],
   };
 
