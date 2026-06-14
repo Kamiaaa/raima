@@ -47,14 +47,14 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       title: 'Email Us',
-      details: 'info@mango.com.bd',
+      details: 'info@raimatravel.com.bd',
       description: 'Send us an email anytime',
       color: 'from-slate-500 to-slate-700'
     },
     {
       icon: FaPhone,
       title: 'Call Us',
-      details: '+8801730068810, +8801730068811',
+      details: '+8801730068845, +880255045262',
       description: 'Sun-Thurs from 10am to 6pm',
       color: 'from-slate-500 to-slate-700'
     },
