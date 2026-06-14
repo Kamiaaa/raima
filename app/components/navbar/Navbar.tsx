@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// Icons using lucide-react (install with: npm install lucide-react)
+// Cleaned up unused imports and added highly relevant travel icons
 import {
   Menu,
   X,
@@ -13,21 +13,12 @@ import {
   Target,
   Users,
   Briefcase,
-  Wifi,
-  Network,
-  Server,
-  Fingerprint,
-  Cloud,
-  GraduationCap,
-  Mail,
-  Heart,
-  Eye,
-  TrendingUp,
-  Database,
-  Shield,
-  Lock,
-  Globe,
-  Zap,
+  Compass,
+  UserCheck,
+  Palmtree,
+  FileText,
+  Plane,
+  MapPin,
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -59,24 +50,24 @@ const Navbar = () => {
     setOpenDropdown(null);
   };
 
-  // Dropdown data with relevant icons
+  // Dropdown data with relevant travel and corporate icons
   const aboutUsDropdown: DropdownMenu = {
     name: 'About Us',
     items: [
-      { name: 'About Ramisa International Travel', href: '/about', icon: <Briefcase className="w-4 h-4" /> },
+      { name: 'About Ramisa International Travel', href: '/about', icon: <Compass className="w-4 h-4" /> },
       { name: 'Mission & Vision', href: '/mission-vision', icon: <Target className="w-4 h-4" /> },
-      { name: 'MD Message', href: '/bod', icon: <Users className="w-4 h-4" /> },
-      { name: 'Management Team', href: '/management-team', icon: <Briefcase className="w-4 h-4" /> },
+      { name: 'MD Message', href: '/bod', icon: <UserCheck className="w-4 h-4" /> },
+      { name: 'Management Team', href: '/management-team', icon: <Users className="w-4 h-4" /> },
     ],
   };
 
   const servicesDropdown: DropdownMenu = {
     name: 'Services',
     items: [
-      { name: 'Tours', href: '/bandwidth', icon: <Wifi className="w-4 h-4" /> },
-      { name: 'Visa Service', href: '/data-connectivity', icon: <Network className="w-4 h-4" /> },
-      { name: 'Air Tickets', href: '/iplc', icon: <Globe className="w-4 h-4" /> },
-      { name: 'Umrah', href: '/data-center', icon: <Server className="w-4 h-4" /> },
+      { name: 'Tours', href: '/bandwidth', icon: <Palmtree className="w-4 h-4" /> },
+      { name: 'Visa Service', href: '/data-connectivity', icon: <FileText className="w-4 h-4" /> },
+      { name: 'Air Tickets', href: '/iplc', icon: <Plane className="w-4 h-4" /> },
+      { name: 'Umrah', href: '/data-center', icon: <MapPin className="w-4 h-4" /> },
     ],
   };
 
@@ -131,7 +122,7 @@ const Navbar = () => {
               className="flex items-center space-x-2 group"
               onClick={closeAllMenus}
             >
-              {/* Responsive logo container - smaller on mobile, larger on desktop */}
+              {/* Responsive logo container */}
               <div className="relative w-28 h-14 sm:w-32 sm:h-16 md:w-36 md:h-18 lg:w-40 lg:h-20">
                 <Image
                   src="/img/logo.png"
@@ -202,10 +193,10 @@ const Navbar = () => {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-150"
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-150 group"
                           onClick={() => setOpenDropdown(null)}
                         >
-                          <span className="text-gray-400 group-hover:text-yellow-500">
+                          <span className="text-gray-400 group-hover:text-yellow-500 transition-colors">
                             {item.icon}
                           </span>
                           {item.name}
@@ -227,7 +218,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile menu button - Only shows hamburger icon */}
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -263,7 +254,6 @@ const Navbar = () => {
         >
           {/* Menu Header with Logo and Close Button */}
           <div className="flex items-center justify-between p-4 border-b border-slate-700">
-            {/* Logo in mobile menu header */}
             <Link
               href="/"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -346,7 +336,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Menu Footer with CTA */}
+          {/* Menu Footer with Hotline */}
           <div className="p-4 border-t border-slate-700">
             <Link
               href="/career"
