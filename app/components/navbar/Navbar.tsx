@@ -5,14 +5,14 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// Cleaned up unused imports and added highly relevant travel icons
+// Exchanged Briefcase for PhoneCall for the hotline
 import {
   Menu,
   X,
   ChevronDown,
   Target,
   Users,
-  Briefcase,
+  PhoneCall, // <-- Swapped Briefcase for PhoneCall
   Compass,
   UserCheck,
   Palmtree,
@@ -208,13 +208,13 @@ const Navbar = () => {
               </div>
             ))}
 
-            {/* CTA Button */}
+            {/* CTA Button with updated PhoneCall icon */}
             <Link
-              href="/career"
+              href="tel:+8801730068845" // Optional UX tip: Use 'tel:' so users can click to call directly
               className="ml-4 px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-yellow-500/30 flex items-center gap-2"
             >
-              <Briefcase className="w-4 h-4" />
-              Career
+              <PhoneCall className="w-4 h-4 animate-pulse" /> {/* Added a subtle pulse for a hotline feel */}
+              Hotline : +8801730068845
             </Link>
           </div>
 
@@ -336,14 +336,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Menu Footer with Hotline */}
+          {/* Menu Footer with updated Hotline icon */}
           <div className="p-4 border-t border-slate-700">
             <Link
-              href="/career"
+              href="tel:+8801730068845"
               className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              <Briefcase className="w-4 h-4" />
+              <PhoneCall className="w-4 h-4" />
               Hotline : +8801730068845
             </Link>
           </div>
