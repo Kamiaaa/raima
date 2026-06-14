@@ -19,7 +19,7 @@ import {
   FaCheckCircle,
   FaFileInvoiceDollar,
   FaBriefcase,
-  FaUserGrad
+  FaUserMd
 } from 'react-icons/fa';
 
 // Hero Section Component matching shared application layout design
@@ -208,7 +208,7 @@ const VisaService = () => {
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Applicant Employment Status</label>
                 <div className="relative">
-                  <FaUserGrad className="absolute left-3 top-3.5 text-slate-400" />
+                  <FaUserMd className="absolute left-3 top-3.5 text-slate-400" />
                   <select 
                     value={employmentStatus}
                     onChange={(e) => setEmploymentStatus(e.target.value)}
