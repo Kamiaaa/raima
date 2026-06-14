@@ -6,7 +6,8 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import DarkModeToggle from "./components/DarkModeToggle";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
