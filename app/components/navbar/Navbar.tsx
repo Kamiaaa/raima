@@ -155,7 +155,7 @@ const Navbar = () => {
                       px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
                       flex items-center gap-1 group
                       ${openDropdown === link.name
-                        ? 'bg-yellow-500 text-white shadow-lg shadow-yellow-500/25'
+                        ? 'bg-red-500 text-white shadow-lg shadow-red-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }
                     `}
@@ -172,7 +172,7 @@ const Navbar = () => {
                     className={`
                       px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
                       ${pathname === link.href
-                        ? 'bg-yellow-500 text-white shadow-lg shadow-yellow-500/25'
+                        ? 'bg-red-500 text-white shadow-lg shadow-red-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }
                     `}
@@ -193,10 +193,10 @@ const Navbar = () => {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-150 group"
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-150 group"
                           onClick={() => setOpenDropdown(null)}
                         >
-                          <span className="text-gray-400 group-hover:text-yellow-500 transition-colors">
+                          <span className="text-gray-400 group-hover:text-red-500 transition-colors">
                             {item.icon}
                           </span>
                           {item.name}
@@ -211,7 +211,7 @@ const Navbar = () => {
             {/* CTA Button with updated PhoneCall icon */}
             <Link
               href="tel:+8801730068845" // Optional UX tip: Use 'tel:' so users can click to call directly
-              className="ml-4 px-5 py-2 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-yellow-500/30 flex items-center gap-2"
+              className="ml-4 px-5 py-2 bg-red-500 hover:bg-red-600 text-white text-sm font-semibold rounded-lg transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-red-500/30 flex items-center gap-2"
             >
               <PhoneCall className="w-4 h-4 animate-pulse" /> {/* Added a subtle pulse for a hotline feel */}
               Hotline : +8801730068845
@@ -302,12 +302,12 @@ const Navbar = () => {
                         ${openDropdown === link.name ? 'max-h-96 opacity-100 mt-1' : 'max-h-0 opacity-0'}
                       `}
                     >
-                      <div className="pl-4 border-l-2 border-yellow-500/30 ml-3 space-y-1">
+                      <div className="pl-4 border-l-2 border-red-500/30 ml-3 space-y-1">
                         {link.dropdownData?.items.map((item) => (
                           <Link
                             key={item.name}
                             href={item.href}
-                            className="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-400 hover:text-yellow-400 transition-colors rounded-lg"
+                            className="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-400 hover:text-red-400 transition-colors rounded-lg"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             {item.icon}
@@ -323,7 +323,7 @@ const Navbar = () => {
                     className={`
                       block px-3 py-3 rounded-lg font-medium transition-all duration-200
                       ${pathname === link.href
-                        ? 'bg-yellow-500/20 text-yellow-400 border-l-4 border-yellow-500'
+                        ? 'bg-red-500/20 text-red-400 border-l-4 border-red-500'
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }
                     `}
@@ -340,7 +340,7 @@ const Navbar = () => {
           <div className="p-4 border-t border-slate-700">
             <Link
               href="tel:+8801730068845"
-              className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-md"
+              className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <PhoneCall className="w-4 h-4" />
