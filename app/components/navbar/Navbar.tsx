@@ -56,8 +56,7 @@ const Navbar = () => {
     items: [
       { name: 'About Ramisa International Travel', href: '/about', icon: <Compass className="w-4 h-4" /> },
       { name: 'Mission & Vision', href: '/mission-vision', icon: <Target className="w-4 h-4" /> },
-      { name: 'MD Message', href: '/bod', icon: <UserCheck className="w-4 h-4" /> },
-      { name: 'Management Team', href: '/management-team', icon: <Users className="w-4 h-4" /> },
+      { name: 'MD Message', href: '/managing-director', icon: <UserCheck className="w-4 h-4" /> },
     ],
   };
 
