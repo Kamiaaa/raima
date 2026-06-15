@@ -121,14 +121,14 @@ const CEOFounder = () => {
               </div>
 
               {/* Minimalist Contact / Professional Links */}
-              <div className="flex gap-3 border-t border-slate-100 dark:border-slate-700/50 pt-4">
+              {/* <div className="flex gap-3 border-t border-slate-100 dark:border-slate-700/50 pt-4">
                 <a href="mailto:md@raimatravel.com.bd" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 text-slate-500 hover:text-orange-500 shadow-sm border border-slate-100 dark:border-slate-700/50 transition">
                   <FaEnvelope className="h-4 w-4" />
                 </a>
                 <a href="#" className="p-2.5 rounded-lg bg-white dark:bg-slate-800 text-slate-500 hover:text-orange-500 shadow-sm border border-slate-100 dark:border-slate-700/50 transition">
                   <FaLinkedin className="h-4 w-4" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
