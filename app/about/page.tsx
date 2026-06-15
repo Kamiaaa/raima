@@ -22,7 +22,7 @@ import { MdTour } from 'react-icons/md';
 // Standardized Global Hero Section Component
 function HeroSection({ title, description }: { title: string; description: string }) {
   return (
-    <div className="relative h-[40vh] min-h-[260px] w-full overflow-hidden">
+    <div className="relative h-[40vh] min-h-65 w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -45,7 +45,7 @@ function HeroSection({ title, description }: { title: string; description: strin
           Your Journey, Our Passion
         </div>
 
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4 tracking-tight">
           {title}
         </h1>
         <p className="text-base md:text-lg text-orange-50/90 max-w-2xl mx-auto font-light">
