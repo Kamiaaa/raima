@@ -115,7 +115,7 @@ const CEOFounder = () => {
             {/* Title & Organization Meta info */}
             <div className="px-2 space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Md. KamrulIslam Khan</h3>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Md. Kamrul Islam Khan</h3>
                 <p className="text-sm font-semibold text-orange-600 dark:text-orange-400">CEO & Founder</p>
                 <p className="text-xs text-slate-400 dark:text-slate-500">Raima International Travel</p>
               </div>
