@@ -337,7 +337,7 @@ export default function Carousel() {
                         <p className={`text-3xl sm:text-4xl md:text-5xl font-bail lg:text-7xl text-orange-500 mb-2 ${styles['text-slide-in']}`}>
                             {slide.title}
                         </p>
-                        <p className={`text-xl sm:text-2xl md:text-3xl font-source font-bold lg:text-5xl text-black dark:text-white mb-4 ${styles['text-slide-in-delay']}`}>
+                        <p className={`text-xl sm:text-2xl md:text-3xl font-bail lg:text-5xl text-black dark:text-white mb-4 ${styles['text-slide-in-delay']}`}>
                             {slide.subtitle}
                         </p>
 
