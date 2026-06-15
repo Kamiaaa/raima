@@ -56,7 +56,7 @@ const PromotionalBanner = () => {
                         className="relative overflow-hidden bg-transparent border-2 border-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg group flex items-center justify-center gap-2"
                     >
                         <MdOutlinePhoneForwarded className="text-xl relative z-10" />
-                        <span className="relative z-10">+880 1234 567890</span>
+                        <span className="relative z-10">+880 173 0068845</span>
                         <span className="absolute inset-0 bg-orange-600 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0"></span>
                     </button>
                 </div>
