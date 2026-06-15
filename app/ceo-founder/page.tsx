@@ -81,7 +81,7 @@ const CEOFounder = () => {
       
       {/* Standardized Layout Hero Component */}
       <HeroSection 
-        title="Message From Managing Director"
+        title="Message From CEO & Founder"
         description="A leadership overview highlighting our foundational commitments, client satisfaction parameters, and corporate vision."
       />
 
