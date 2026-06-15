@@ -44,7 +44,7 @@ function HeroSection({ title, description }: { title: string; description: strin
   );
 }
 
-const MDMessagePage = () => {
+const CEOFounder = () => {
   // Animation variants setup
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -103,7 +103,7 @@ const MDMessagePage = () => {
               <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900">
                 {/* Fallback pattern uses an official-looking corporate style if asset isn't ready */}
                 <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop"
+                  src="img/ceo.jpg"
                   alt="Managing Director Profile Pic"
                   fill
                   className="object-cover object-top"
@@ -115,8 +115,8 @@ const MDMessagePage = () => {
             {/* Title & Organization Meta info */}
             <div className="px-2 space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Al-Haj Md. ... [Name]</h3>
-                <p className="text-sm font-semibold text-orange-600 dark:text-orange-400">Managing Director</p>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Md. KamrulIslam Khan</h3>
+                <p className="text-sm font-semibold text-orange-600 dark:text-orange-400">CEO & Founder</p>
                 <p className="text-xs text-slate-400 dark:text-slate-500">Raima International Travel</p>
               </div>
 
@@ -171,10 +171,10 @@ const MDMessagePage = () => {
                 <p className="text-sm text-slate-400 dark:text-slate-500">Warm Regards,</p>
                 <div className="text-slate-800 dark:text-slate-200 my-2 h-12 flex items-center">
                   {/* Decorative placeholder signature element */}
-                  <span className="font-serif text-3xl opacity-60 dark:opacity-40 italic select-none">Md. ...</span>
+                  <span className="font-serif text-3xl opacity-60 dark:opacity-40 italic select-none">Md. Kamrul Islam Khan</span>
                 </div>
-                <h4 className="text-base font-bold text-slate-900 dark:text-white">Al-Haj Md. ... [Name]</h4>
-                <p className="text-xs text-slate-500">Managing Director, Raima International Travel</p>
+                <h4 className="text-base font-bold text-slate-900 dark:text-white">Md. Kamrul Islam Khan</h4>
+                <p className="text-xs text-slate-500">CEO & Founder, Raima International Travel</p>
               </div>
 
               {/* Trust Badge Indicator */}
@@ -217,4 +217,4 @@ const MDMessagePage = () => {
   );
 };
 
-export default MDMessagePage;
+export default CEOFounder;
