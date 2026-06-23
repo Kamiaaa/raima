@@ -28,7 +28,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-teal-400",
         bgGradient: "from-[#0f2d37] via-[#0b2027] to-[#050f13]",
         buttonText: "Explore Beaches",
-        link: "/contact",
+        link: "/tours/coxs-bazar",
         images: {
             topRight: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80",
@@ -43,7 +43,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-amber-400",
         bgGradient: "from-[#2c1d11] via-[#1f140b] to-[#100a05]",
         buttonText: "Book Adventure",
-        link: "/contact",
+        link: "/tours/rangamati",
         images: {
             topRight: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
@@ -58,7 +58,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-sky-400",
         bgGradient: "from-[#112240] via-[#0a1526] to-[#040a12]",
         buttonText: "Discover History",
-        link: "/contact",
+        link: "/tours/india",
         images: {
             topRight: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80",
@@ -73,13 +73,13 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-indigo-400",
         bgGradient: "from-[#1e1b4b] via-[#11103c] to-[#07071e]",
         buttonText: "Explore Thailand",
-        link: "/contact",
+        link: "/tours/thailand",
         images: {
             topRight: "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=400&q=80",
             bottomRight: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&q=80"
         }
-    }
+    },
 ];
 
 interface SlideImageCollageProps {
@@ -153,10 +153,6 @@ export default function Carousel() {
 
     const handleNext = useCallback(() => {
         setCurrentIndex((prev) => (prev === carouselSlides.length - 1 ? 0 : prev + 1));
-    }, []);
-
-    const handlePrev = useCallback(() => {
-        setCurrentIndex((prev) => (prev === 0 ? carouselSlides.length - 1 : prev - 1));
     }, []);
 
     const goToSlide = (index: number) => {
@@ -247,30 +243,7 @@ export default function Carousel() {
                     })}
                 </div>
 
-                <div className="absolute top-[40%] lg:top-[50%] transform -translate-y-1/2 left-2 lg:-left-16 z-30">
-                    <button
-                        onClick={handlePrev}
-                        className="bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md border border-white/10 transition-all duration-200 focus:outline-none cursor-pointer shadow-lg"
-                        aria-label="Previous Slide"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div className="absolute top-[40%] lg:top-[50%] transform -translate-y-1/2 right-2 lg:-right-16 z-30">
-                    <button
-                        onClick={handleNext}
-                        className="bg-white/10 hover:bg-white/20 text-white p-3 rounded-full backdrop-blur-md border border-white/10 transition-all duration-200 focus:outline-none cursor-pointer shadow-lg"
-                        aria-label="Next Slide"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                </div>
-
+                {/* Slide Pagination Tracker */}
                 <div className="flex justify-center items-center space-x-2 md:space-x-3 mt-8 lg:mt-12">
                     {carouselSlides.map((_, index) => (
                         <button
