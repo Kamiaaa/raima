@@ -1,4 +1,7 @@
-import Carousel from "./components/carousel/Carousel";
+
+
+
+import Carousel from "./components/Carousel";
 import PromotionalBanner from "./components/PromotionalBanner";
 import ServicesSection from "./components/Services";
 import TopContries from "./components/TopContries";
@@ -9,7 +12,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 export default function Home() {
   return (
     <>
-      <Carousel />
+      <Carousel/>
       <ServicesSection />
       <TopContries />
       <VisaServices />
