@@ -28,7 +28,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-teal-400",
         bgGradient: "from-[#0f2d37] via-[#0b2027] to-[#050f13]",
         buttonText: "Explore Beaches",
-        link: "/tours/coxs-bazar",
+        link: "/contact",
         images: {
             topRight: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80",
@@ -43,7 +43,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-amber-400",
         bgGradient: "from-[#2c1d11] via-[#1f140b] to-[#100a05]",
         buttonText: "Book Adventure",
-        link: "/tours/rangamati",
+        link: "/contact",
         images: {
             topRight: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
@@ -58,7 +58,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-sky-400",
         bgGradient: "from-[#112240] via-[#0a1526] to-[#040a12]",
         buttonText: "Discover History",
-        link: "/tours/india",
+        link: "/contact",
         images: {
             topRight: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80",
@@ -73,7 +73,7 @@ const carouselSlides: SlideData[] = [
         accentBg: "bg-indigo-400",
         bgGradient: "from-[#1e1b4b] via-[#11103c] to-[#07071e]",
         buttonText: "Explore Thailand",
-        link: "/tours/thailand",
+        link: "/contact",
         images: {
             topRight: "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=400&q=80",
             centerLeft: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=400&q=80",
@@ -116,7 +116,7 @@ const SlideImageCollage: React.FC<SlideImageCollageProps> = ({ images, isActive 
     }, [isActive]);
 
     return (
-        <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] aspect-square mx-auto">
+        <div className="relative w-full max-w-70 sm:max-w-85 md:max-w-100 aspect-square mx-auto">
             {/* 1. Top-Right Image Circle */}
             <div className="absolute top-0 right-2 w-[55%] aspect-square rounded-full border-4 border-white/20 overflow-hidden shadow-2xl z-10 transition-all duration-1000 ease-in-out">
                 <img
