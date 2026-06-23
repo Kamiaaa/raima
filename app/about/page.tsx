@@ -27,7 +27,7 @@ export default function WhoWeAre() {
               Crafting journeys that stay with you forever.
             </h2>
             <p className="text-[#666666] text-sm leading-relaxed max-w-md">
-              At Raima International Travel, we translate your wanderlust into seamless realities. From breathtaking landscapes to deep-rooted cultural immersions, our customized itineraries ensure you experience the world at its absolute best.
+              Founded in 2025, Raima International Travel was established with a vision to make global travel more accessible, inspiring, and unforgettable. Driven by a passion for exploration and excellence, we are committed to connecting travelers with the world's most remarkable destinations through personalized and professionally curated travel solutions.
             </p>
           </div>
         </div>
