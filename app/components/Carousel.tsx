@@ -205,7 +205,7 @@ export default function Carousel() {
                             >
                                 <div className="flex flex-col justify-center space-y-6 text-center lg:text-left order-1">
                                     <div className="space-y-4">
-                                        <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight ${slide.accentColor} leading-tight`}>
+                                        <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bail font-bold tracking-tight ${slide.accentColor} leading-tight`}>
                                             {slide.title}
                                         </h1>
 
