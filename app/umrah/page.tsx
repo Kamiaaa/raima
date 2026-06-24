@@ -81,7 +81,7 @@ function HeroSection({ title, description }: { title: string; description: strin
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/img/page-back.png"
+          src="/img/page-umrah.png"
           alt="Hero background"
           fill
           className="object-cover"
