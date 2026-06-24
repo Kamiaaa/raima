@@ -45,7 +45,7 @@ function HeroSection({ title, description }: HeroSectionProps) {
 
       {/* Content Canvas */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bail text-white tracking-tight mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4 tracking-tight">
           {title}
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">

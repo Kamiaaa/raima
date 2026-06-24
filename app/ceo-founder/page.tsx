@@ -29,7 +29,7 @@ function HeroSection({ title, description }: { title: string; description: strin
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4 tracking-tight">
           {title}
         </h1>
         <p className="text-base md:text-lg text-orange-50/90 max-w-2xl mx-auto font-light">

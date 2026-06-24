@@ -5,5 +5,3 @@
     --font-bail: "Abril Fatface", serif;
     --font-mev: "Rammetto One", sans-serif;
 }
-
-@custom-variant dark (&:where(.dark, .dark *));
