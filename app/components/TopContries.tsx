@@ -98,10 +98,10 @@ function FeatureCard({ feature, index }: FeatureCardProps) {
           </h3>
 
           {/* Explore Button */}
-          <button className="group/btn inline-flex items-center gap-1.5 text-white font-medium hover:transition-all">
-            Explore
+          {/* <button className="group/btn inline-flex items-center gap-1.5 text-white font-medium hover:transition-all">
+            Reach Us
             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-          </button>
+          </button> */}
         </div>
       </div>
 
