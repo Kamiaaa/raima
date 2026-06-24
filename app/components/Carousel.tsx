@@ -180,7 +180,7 @@ export default function Carousel() {
 
     return (
         <section
-            className="w-full min-h-screen lg:min-h-[85vh] text-white flex items-center justify-center relative overflow-hidden py-16 md:py-0 px-4 sm:px-6 lg:px-12 select-none transition-all duration-1000 ease-in-out"
+            className="w-full min-h-screen lg:min-h-[90vh] text-white flex items-center justify-center relative overflow-hidden py-16 md:py-0 px-4 sm:px-6 lg:px-12 select-none transition-all duration-1000 ease-in-out"
             style={{
                 backgroundImage: `radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0%, transparent 50%), linear-gradient(135deg, ${extractColors(activeSlide.bgGradient)})`
             }}
