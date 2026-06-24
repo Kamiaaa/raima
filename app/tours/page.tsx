@@ -40,10 +40,10 @@ function HeroSection({ title, description }: { title: string; description: strin
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
           {title}
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto font-light">
           {description}
         </p>
       </div>
@@ -64,36 +64,36 @@ const Tours = () => {
       title: 'Email Us',
       details: 'info@raimatravel.com.bd',
       description: 'Send us an email anytime',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     },
     {
       icon: FaPhone,
       title: 'Call Us',
       details: '+8801730068845, +880255045262',
       description: 'Sun-Thurs from 10am to 6pm',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Visit Us',
       details: 'Police Plaza Concord (7th Floor), Tower-2 Plot-2, Road-144, Gulshan-1, Dhaka-1212',
       description: 'Bangladesh',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     },
     {
       icon: FaClock,
       title: 'Office Hours',
       details: 'Sunday - Thursday',
       description: '10:00 AM - 6:00 PM BST',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     }
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, href: '#', color: 'hover:text-slate-600 dark:hover:text-slate-400' },
-    { icon: FaTwitter, href: '#', color: 'hover:text-slate-500 dark:hover:text-slate-300' },
-    { icon: FaFacebook, href: '#', color: 'hover:text-slate-500 dark:hover:text-slate-300' },
-    { icon: FaInstagram, href: '#', color: 'hover:text-slate-600 dark:hover:text-slate-400' }
+    { icon: FaLinkedin, href: '#', color: 'hover:text-slate-400' },
+    { icon: FaTwitter, href: '#', color: 'hover:text-slate-300' },
+    { icon: FaFacebook, href: '#', color: 'hover:text-slate-300' },
+    { icon: FaInstagram, href: '#', color: 'hover:text-slate-400' }
   ];
 
   // Featured destinations curated for Bangladeshi travelers
@@ -137,7 +137,7 @@ const Tours = () => {
 
   return (
     <motion.div 
-      className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+      className="min-h-screen bg-slate-900 text-slate-100 transition-colors duration-300 overflow-x-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -159,19 +159,19 @@ const Tours = () => {
         
         {/* INTERACTIVE TOUR SEARCH & PLANNER WIDGET */}
         <motion.div variants={itemVariants} className="w-full">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700/50">
+          <div className="bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border border-slate-700/50">
             {/* Widget Header tabs */}
-            <div className="bg-slate-900 px-6 py-4 flex flex-wrap gap-4 justify-between items-center">
+            <div className="bg-slate-950 px-6 py-4 flex flex-wrap gap-4 justify-between items-center border-b border-slate-700/40">
               <div className="flex space-x-2">
                 <button 
                   onClick={() => setTourType('International')}
-                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tourType === 'International' ? 'bg-white text-slate-900' : 'text-slate-300 hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tourType === 'International' ? 'bg-slate-100 text-slate-900' : 'text-slate-300 hover:bg-slate-800'}`}
                 >
                   International Tours
                 </button>
                 <button 
                   onClick={() => setTourType('Domestic')}
-                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tourType === 'Domestic' ? 'bg-white text-slate-900' : 'text-slate-300 hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tourType === 'Domestic' ? 'bg-slate-100 text-slate-900' : 'text-slate-300 hover:bg-slate-800'}`}
                 >
                   Domestic Packages
                 </button>
@@ -180,7 +180,7 @@ const Tours = () => {
                 <select 
                   value={groupSize} 
                   onChange={(e) => setGroupSize(e.target.value)}
-                  className="bg-slate-800 border border-slate-700 rounded px-2 py-1 focus:outline-none"
+                  className="bg-slate-800 border border-slate-700 rounded px-2 py-1 focus:outline-none text-slate-200"
                 >
                   <option>Solo Traveler</option>
                   <option>Couple Tour</option>
@@ -193,45 +193,46 @@ const Tours = () => {
             {/* Tour Planner Form Fields */}
             <form onSubmit={handleSearchSubmit} className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Where to?</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Where to?</label>
                 <div className="relative">
-                  <FaCompass className="absolute left-3 top-3.5 text-slate-400" />
+                  <FaCompass className="absolute left-3 top-3.5 text-slate-500" />
                   <input 
                     type="text" 
                     placeholder="e.g., Maldives, Kashmir, Cox's Bazar" 
                     value={destination}
                     onChange={(e) => setDestination(e.target.value)}
                     required
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900/50 text-white placeholder-slate-500 focus:ring-2 focus:ring-slate-600 outline-none transition"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Target Month of Travel</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Target Month of Travel</label>
                 <div className="relative">
-                  <FaCalendarAlt className="absolute left-3 top-3.5 text-slate-400" />
+                  <FaCalendarAlt className="absolute left-3 top-3.5 text-slate-500" />
                   <input 
                     type="month" 
                     value={travelMonth}
                     onChange={(e) => setTravelMonth(e.target.value)}
                     required
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900/50 text-white focus:ring-2 focus:ring-slate-600 outline-none transition color-scheme-dark"
+                    style={{ colorScheme: 'dark' }}
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Approximate Budget Per Person</label>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Approximate Budget Per Person</label>
                 <div className="relative">
-                  <FaUserFriends className="absolute left-3 top-3.5 text-slate-400" />
+                  <FaUserFriends className="absolute left-3 top-3.5 text-slate-500" />
                   <select 
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                    className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900/50 text-white focus:ring-2 focus:ring-slate-600 outline-none transition"
                     defaultValue="Standard"
                   >
-                    <option value="Budget">Budget Friendly</option>
-                    <option value="Standard">Standard Comfort</option>
-                    <option value="Premium">Premium Luxury</option>
+                    <option value="Budget" className="bg-slate-800">Budget Friendly</option>
+                    <option value="Standard" className="bg-slate-800">Standard Comfort</option>
+                    <option value="Premium" className="bg-slate-800">Premium Luxury</option>
                   </select>
                 </div>
               </div>
@@ -241,7 +242,7 @@ const Tours = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full sm:w-auto px-8 py-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-bold rounded-xl shadow-lg hover:bg-slate-800 dark:hover:bg-white transition-all duration-200"
+                  className="w-full sm:w-auto px-8 py-3 bg-slate-100 text-slate-900 font-bold rounded-xl shadow-lg hover:bg-white transition-all duration-200"
                 >
                   Plan My Tailored Itinerary
                 </motion.button>
@@ -250,26 +251,26 @@ const Tours = () => {
           </div>
         </motion.div>
 
-        {/* CURATED GRID OF TRENDING HOLLIDAY PACKAGES */}
+        {/* CURATED GRID OF TRENDING HOLIDAY PACKAGES */}
         <div className="space-y-6">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Trending Holiday Packages</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Most requested seasonal routes backed by reliable airline deals and resort contracts.</p>
+            <h2 className="text-2xl font-bold text-white">Trending Holiday Packages</h2>
+            <p className="text-sm text-slate-400">Most requested seasonal routes backed by reliable airline deals and resort contracts.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredDestinations.map((pkg, i) => (
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all"
+                className="bg-slate-800 border border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all"
               >
                 <div>
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">{pkg.details}</span>
-                  <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-2">{pkg.name}</h3>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">{pkg.theme}</p>
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-widest block mb-1">{pkg.details}</span>
+                  <h3 className="font-bold text-xl text-white mb-2">{pkg.name}</h3>
+                  <p className="text-sm text-slate-400 mb-4">{pkg.theme}</p>
                 </div>
-                <div className="border-t border-slate-100 dark:border-slate-700/60 pt-4 mt-2">
-                  <span className="text-sm font-semibold text-slate-800 dark:text-slate-200 block">{pkg.pricing}</span>
+                <div className="border-t border-slate-700/60 pt-4 mt-2">
+                  <span className="text-sm font-semibold text-slate-200 block">{pkg.pricing}</span>
                 </div>
               </motion.div>
             ))}
@@ -282,13 +283,13 @@ const Tours = () => {
             <motion.div 
               key={i}
               variants={itemVariants}
-              className="p-6 bg-white dark:bg-slate-800/80 border border-slate-100 dark:border-slate-700/50 rounded-2xl shadow-sm"
+              className="p-6 bg-slate-800 border border-slate-700/50 rounded-2xl shadow-sm"
             >
-              <div className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center mb-4 text-slate-800 dark:text-slate-200">
+              <div className="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center mb-4 text-slate-200">
                 <feat.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">{feat.title}</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{feat.desc}</p>
+              <h3 className="font-bold text-lg text-white mb-2">{feat.title}</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">{feat.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -298,13 +299,13 @@ const Tours = () => {
           {/* Contact Information Card */}
           <motion.div variants={itemVariants}>
             <motion.div 
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 h-full border border-slate-100 dark:border-transparent transition-colors duration-300"
+              className="bg-slate-800 rounded-2xl shadow-2xl p-8 h-full border border-transparent transition-colors duration-300"
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-2xl font-bold text-white mb-4">
                 Consult With a Tour Specialist
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-8">
+              <p className="text-slate-300 mb-8 font-light text-sm md:text-base leading-relaxed">
                 Ready to book or need custom visa tracking? Speak directly with our dedicated holiday planners. We take care of tickets, vouchers, insurance, and embassy protocols.
               </p>
 
@@ -316,13 +317,13 @@ const Tours = () => {
                     className="flex items-start group"
                     whileHover={{ x: 5 }}
                   >
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center shadow-md`}>
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center shadow-md border border-slate-700/50`}>
                       <item.icon className="h-5 w-5 text-white" />
                     </div>
                     <div className="ml-4">
-                      <h3 className="font-semibold text-slate-900 dark:text-white">{item.title}</h3>
-                      <p className="text-slate-700 dark:text-slate-200 font-medium break-all">{item.details}</p>
-                      <p className="text-slate-500 dark:text-slate-400 text-sm">{item.description}</p>
+                      <h3 className="font-semibold text-white">{item.title}</h3>
+                      <p className="text-slate-200 font-medium break-all">{item.details}</p>
+                      <p className="text-slate-500 text-sm">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -330,13 +331,13 @@ const Tours = () => {
 
               {/* Social Links */}
               <div>
-                <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Follow Raima International</h3>
+                <h3 className="font-semibold text-white mb-4">Follow Raima International</h3>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
                       href={social.href}
-                      className={`w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 ${social.color} transition-all duration-300 shadow-sm`}
+                      className={`w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center text-slate-300 ${social.color} transition-all duration-300 shadow-sm`}
                       whileHover={{ scale: 1.15, y: -2 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -351,15 +352,15 @@ const Tours = () => {
           {/* Google Map Card */}
           <motion.div variants={itemVariants}>
             <motion.div 
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 border border-slate-100 dark:border-transparent transition-colors duration-300 h-full"
+              className="bg-slate-800 rounded-2xl shadow-2xl p-8 border border-transparent transition-colors duration-300 h-full"
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
               <div className="mb-6">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Find Us in Dhaka</h2>
-                <p className="text-slate-600 dark:text-slate-300">Stop by our holiday section to finalize hotel dynamic selections and route bookings.</p>
+                <h2 className="text-2xl font-bold text-white mb-2">Find Us in Dhaka</h2>
+                <p className="text-slate-300 text-sm">Stop by our holiday section to finalize hotel dynamic selections and route bookings.</p>
               </div>
 
-              <div className="relative rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-transparent">
+              <div className="relative rounded-xl overflow-hidden shadow-lg border border-transparent">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.156381983053!2d90.4173873!3d23.7774438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77dec26a455%3A0x6b77ecb4729007f3!2sPolice%20Plaza%20Concord%20Shopping%20Mall!5e0!3m2!1sen!2sbd!4v1680000000000!5m2!1sen!2sbd"
                   width="100%"
@@ -368,26 +369,26 @@ const Tours = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full"
+                  className="w-full grayscale invert opacity-80"
                   title="Raima International Travel Office Location Map"
                 />
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </div>
 
               {/* Additional Details */}
-              <div className="mt-6 p-4 bg-slate-100/70 dark:bg-slate-900/50 rounded-lg">
+              <div className="mt-6 p-4 bg-slate-900/50 rounded-lg border border-slate-700/30">
                 <div className="flex items-start space-x-3">
-                  <FaMapMarkerAlt className="h-5 w-5 text-slate-500 dark:text-slate-400 mt-0.5 flex-shrink-0" />
+                  <FaMapMarkerAlt className="h-5 w-5 text-slate-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Directions</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                    <h4 className="font-semibold text-white mb-1">Directions</h4>
+                    <p className="text-sm text-slate-300 leading-relaxed">
                       Police Plaza Concord, Tower-2 (7th Floor), Plot-2, Road-144, Gulshan-1, Dhaka-1212.
                     </p>
                     <a 
                       href="https://maps.google.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center mt-3 text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300 text-sm font-medium transition-colors"
+                      className="inline-flex items-center mt-3 text-slate-400 hover:text-slate-300 text-sm font-medium transition-colors"
                     >
                       Get Directions
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

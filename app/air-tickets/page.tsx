@@ -22,29 +22,33 @@ import {
   FaHeadset
 } from 'react-icons/fa';
 
-// Hero Section Component matching shared application layout design
-function HeroSection({ title, description }: { title: string; description: string }) {
+interface HeroSectionProps {
+  title: string;
+  description: string;
+}
+
+function HeroSection({ title, description }: HeroSectionProps) {
   return (
-    <div className="relative h-[40vh] min-h-65 w-full overflow-hidden">
-      {/* Background Image */}
+    <div className="relative h-[45vh] min-h-[280px] w-full overflow-hidden">
+      {/* Background Image Setup */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/img/page-back.png"
-          alt="Hero background"
+          alt="Premium flight mapping background"
           fill
           className="object-cover"
           priority
         />
-        {/* Dark Overlay */}
+        {/* Deep Overlay Layer targeting theme integration */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4">
+      {/* Content Canvas */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bail text-white tracking-tight mb-4">
           {title}
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
           {description}
         </p>
       </div>
@@ -53,12 +57,12 @@ function HeroSection({ title, description }: { title: string; description: strin
 }
 
 const AirTicketing = () => {
-  // New Customer Information State
+  // Customer Credentials State
   const [customerName, setCustomerName] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
   const [customerEmail, setCustomerEmail] = useState('');
 
-  // Flight Form State
+  // Routing Framework State
   const [tripType, setTripType] = useState<'round-trip' | 'one-way'>('round-trip');
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
@@ -73,37 +77,37 @@ const AirTicketing = () => {
       icon: FaEnvelope,
       title: 'Email Us',
       details: 'info@raimatravel.com.bd',
-      description: 'Send us an email anytime',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      description: 'Corporate and group bookings query line',
+      color: 'from-slate-700 to-slate-800'
     },
     {
       icon: FaPhone,
       title: 'Call Us',
       details: '+8801730068845, +880255045262',
-      description: 'Sun-Thurs from 10am to 6pm',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      description: 'Direct response travel concierge',
+      color: 'from-slate-700 to-slate-800'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Visit Us',
       details: 'Police Plaza Concord (7th Floor), Tower-2 Plot-2, Road-144, Gulshan-1, Dhaka-1212',
-      description: 'Bangladesh',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      description: 'Bangladesh Flagship Office',
+      color: 'from-slate-700 to-slate-800'
     },
     {
       icon: FaClock,
       title: 'Office Hours',
       details: 'Sunday - Thursday',
       description: '10:00 AM - 6:00 PM BST',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-700 to-slate-800'
     }
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, href: '#', color: 'hover:text-slate-600 dark:hover:text-slate-400' },
-    { icon: FaTwitter, href: '#', color: 'hover:text-slate-500 dark:hover:text-slate-300' },
-    { icon: FaFacebook, href: '#', color: 'hover:text-slate-500 dark:hover:text-slate-300' },
-    { icon: FaInstagram, href: '#', color: 'hover:text-slate-600 dark:hover:text-slate-400' }
+    { icon: FaLinkedin, href: '#', color: 'hover:text-slate-400' },
+    { icon: FaTwitter, href: '#', color: 'hover:text-slate-400' },
+    { icon: FaFacebook, href: '#', color: 'hover:text-slate-400' },
+    { icon: FaInstagram, href: '#', color: 'hover:text-slate-400' }
   ];
 
   const services = [
@@ -120,29 +124,27 @@ const AirTicketing = () => {
     { sector: 'Dhaka (DAC) ➔ Toronto (YYZ)', airline: 'Air Canada / Turkish Air', benchmarkPrice: 'Approx BDT 185,000+', terms: 'Multi-sector multi-transit routes.' }
   ];
 
-  // Animation variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 }
     }
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // 1. WhatsApp Message Formatting
-    const targetWhatsAppNumber = '8801730068845'; // Raima International Desk Number
+    const targetWhatsAppNumber = '8801730068845';
     const message = `✈️ *New Flight Query - Raima International* ✈️\n\n` +
                     `👤 *Customer Name:* ${customerName}\n` +
                     `📞 *Phone Number:* ${customerPhone}\n` +
@@ -157,29 +159,31 @@ const AirTicketing = () => {
                     `▪️ *Class:* ${cabinClass}\n\n` +
                     `Please review and dispatch the flight options matrix.`;
 
-    // 2. Encode URI for URL Compatibility
     const encodedMessage = encodeURIComponent(message);
     const whatsAppUrl = `https://wa.me/${targetWhatsAppNumber}?text=${encodedMessage}`;
 
-    // 3. Open WhatsApp Window
     window.open(whatsAppUrl, '_blank');
     setSubmissionSuccess(true);
+
+    // Form tracking clean resets
+    setFrom('');
+    setTo('');
+    setDepartureDate('');
+    setReturnDate('');
   };
 
   return (
     <motion.div 
-      className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+      className="min-h-screen bg-slate-900 text-slate-100 selection:bg-slate-700 selection:text-white antialiased"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
     >
-      {/* Standardized Global Hero Section */}
       <HeroSection 
         title="Air Ticketing & Global Travel"
         description="Explore seamless global travel structures with Raima International Travel. Book worldwide flights, secure premium routes, and receive expert ticketing support from Dhaka."
       />
 
-      {/* Main Content Layout */}
       <motion.div 
         className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16"
         variants={containerVariants}
@@ -187,24 +191,22 @@ const AirTicketing = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        
         {/* INTERACTIVE BOOKING WIDGET */}
         <motion.div variants={itemVariants} className="w-full">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700/50">
-            {/* Widget Header tabs */}
-            <div className="bg-slate-900 px-6 py-4 flex flex-wrap gap-4 justify-between items-center">
+          <div className="bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border border-slate-700/60">
+            <div className="bg-slate-950 px-6 py-4 flex flex-wrap gap-4 justify-between items-center border-b border-slate-800">
               <div className="flex space-x-2">
                 <button 
                   onClick={() => setTripType('round-trip')}
                   type="button"
-                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tripType === 'round-trip' ? 'bg-white text-slate-900' : 'text-slate-300 hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tripType === 'round-trip' ? 'bg-slate-100 text-slate-950 shadow-md' : 'text-slate-300 hover:bg-slate-800'}`}
                 >
                   Round Trip
                 </button>
                 <button 
                   onClick={() => setTripType('one-way')}
                   type="button"
-                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tripType === 'one-way' ? 'bg-white text-slate-900' : 'text-slate-300 hover:bg-slate-800'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${tripType === 'one-way' ? 'bg-slate-100 text-slate-950 shadow-md' : 'text-slate-300 hover:bg-slate-800'}`}
                 >
                   One Way
                 </button>
@@ -215,7 +217,8 @@ const AirTicketing = () => {
                   <select 
                     value={passengers} 
                     onChange={(e) => setPassengers(e.target.value)}
-                    className="bg-slate-800 border border-slate-700 rounded-lg pl-8 pr-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-slate-500 appearance-none cursor-pointer text-xs font-medium"
+                    aria-label="Number of passengers"
+                    className="bg-slate-900 border border-slate-700 rounded-lg pl-8 pr-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-slate-500 appearance-none cursor-pointer text-xs font-medium text-slate-200"
                   >
                     <option>1 Passenger</option>
                     <option>2 Passengers</option>
@@ -229,7 +232,8 @@ const AirTicketing = () => {
                   <select 
                     value={cabinClass} 
                     onChange={(e) => setCabinClass(e.target.value)}
-                    className="bg-slate-800 border border-slate-700 rounded-lg pl-8 pr-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-slate-500 appearance-none cursor-pointer text-xs font-medium"
+                    aria-label="Cabin class portfolio"
+                    className="bg-slate-900 border border-slate-700 rounded-lg pl-8 pr-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-slate-500 appearance-none cursor-pointer text-xs font-medium text-slate-200"
                   >
                     <option>Economy</option>
                     <option>Premium Economy</option>
@@ -240,103 +244,108 @@ const AirTicketing = () => {
               </div>
             </div>
 
-            {/* Booking Form Fields */}
             <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-6">
-              
-              {/* SECTION: CUSTOMER INFORMATION */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-slate-100 dark:border-slate-700/60 pb-6">
+              {/* CUSTOMER PROFILE FIELDSET */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-slate-700/60 pb-6">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Your Full Name</label>
+                  <label htmlFor="customerName" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Your Full Name</label>
                   <input 
+                    id="customerName"
                     type="text" 
                     placeholder="Enter full name" 
                     value={customerName}
                     onChange={(e) => setCustomerName(e.target.value)}
                     required
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white placeholder-slate-500 focus:ring-2 focus:ring-slate-600 outline-none transition"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">WhatsApp / Mobile Number</label>
+                  <label htmlFor="customerPhone" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">WhatsApp / Mobile Number</label>
                   <input 
+                    id="customerPhone"
                     type="tel" 
                     placeholder="e.g., +88017XXXXXXXX" 
                     value={customerPhone}
                     onChange={(e) => setCustomerPhone(e.target.value)}
                     required
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white placeholder-slate-500 focus:ring-2 focus:ring-slate-600 outline-none transition"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Email Address</label>
+                  <label htmlFor="customerEmail" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
                   <input 
+                    id="customerEmail"
                     type="email" 
                     placeholder="name@example.com" 
                     value={customerEmail}
                     onChange={(e) => setCustomerEmail(e.target.value)}
                     required
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white placeholder-slate-500 focus:ring-2 focus:ring-slate-600 outline-none transition"
                   />
                 </div>
               </div>
 
-              {/* SECTION: FLIGHT SECTORS AND DATES */}
+              {/* SECTORS MATRIX FIELDS */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">From</label>
+                  <label htmlFor="fromSector" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">From</label>
                   <div className="relative">
-                    <FaPlaneDeparture className="absolute left-3 top-3.5 text-slate-400" />
+                    <FaPlaneDeparture className="absolute left-3 top-3.5 text-slate-500" />
                     <input 
+                      id="fromSector"
                       type="text" 
                       placeholder="Departure City / Airport" 
                       value={from}
                       onChange={(e) => setFrom(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white placeholder-slate-500 focus:ring-2 focus:ring-slate-600 outline-none transition"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">To</label>
+                  <label htmlFor="toSector" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">To</label>
                   <div className="relative">
-                    <FaPlaneArrival className="absolute left-3 top-3.5 text-slate-400" />
+                    <FaPlaneArrival className="absolute left-3 top-3.5 text-slate-500" />
                     <input 
+                      id="toSector"
                       type="text" 
                       placeholder="Destination City / Airport" 
                       value={to}
                       onChange={(e) => setTo(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white placeholder-slate-500 focus:ring-2 focus:ring-slate-600 outline-none transition"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Departure Date</label>
+                  <label htmlFor="departureDate" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Departure Date</label>
                   <div className="relative">
-                    <FaCalendarAlt className="absolute left-3 top-3.5 text-slate-400" />
+                    <FaCalendarAlt className="absolute left-3 top-3.5 text-slate-500" />
                     <input 
+                      id="departureDate"
                       type="date" 
                       value={departureDate}
                       onChange={(e) => setDepartureDate(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white focus:ring-2 focus:ring-slate-600 outline-none transition [color-scheme:dark]"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Return Date</label>
+                  <label htmlFor="returnDate" className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Return Date</label>
                   <div className="relative">
-                    <FaCalendarAlt className="absolute left-3 top-3.5 text-slate-400" />
+                    <FaCalendarAlt className="absolute left-3 top-3.5 text-slate-500" />
                     <input 
+                      id="returnDate"
                       type="date" 
                       value={returnDate}
                       onChange={(e) => setReturnDate(e.target.value)}
                       disabled={tripType === 'one-way'}
                       required={tripType === 'round-trip'}
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-slate-500 outline-none transition disabled:opacity-50"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-700 bg-slate-900 text-white focus:ring-2 focus:ring-slate-600 outline-none transition disabled:opacity-30 [color-scheme:dark]"
                     />
                   </div>
                 </div>
@@ -345,34 +354,33 @@ const AirTicketing = () => {
               <div className="flex justify-end mt-2">
                 <motion.button 
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full sm:w-auto px-8 py-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-bold rounded-xl shadow-lg hover:bg-slate-800 dark:hover:bg-white transition-all duration-200 flex items-center justify-center gap-2"
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.99 }}
+                  className="w-full sm:w-auto px-8 py-3.5 bg-slate-100 text-slate-950 font-bold rounded-xl shadow-lg hover:bg-white transition-all duration-150 flex items-center justify-center gap-2"
                 >
                   <span>Submit via WhatsApp</span>
                 </motion.button>
               </div>
             </form>
 
-            {/* SYSTEM ALERT POPUP DRAWER */}
             {submissionSuccess && (
               <motion.div 
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
-                className="border-t border-slate-100 dark:border-slate-700 p-6 bg-emerald-50/50 dark:bg-emerald-950/20"
+                className="border-t border-slate-700 p-6 bg-emerald-950/30"
               >
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div>
-                    <h3 className="font-bold text-emerald-800 dark:text-emerald-400 text-base flex items-center gap-2">
+                    <h3 className="font-bold text-emerald-400 text-base flex items-center gap-2">
                       <span>✓</span> Routing Query Dispatched to WhatsApp
                     </h3>
-                    <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
-                      Thank you, <span className="font-bold text-slate-800 dark:text-slate-200">{customerName}</span>. Your data has been structured into our processing lines. If the secure chat interface did not prompt automatically, please ensure pop-up access is allowed or manually contact our desk.
+                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                      Thank you, <span className="font-bold text-slate-200">{customerName}</span>. Your data has been structured into our processing lines. If the secure chat interface did not prompt automatically, please ensure pop-up access is allowed or manually contact our desk.
                     </p>
                   </div>
                   <button 
                     onClick={() => setSubmissionSuccess(false)}
-                    className="text-xs font-bold text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1.5 rounded-lg shadow-sm transition"
+                    className="text-xs font-bold text-slate-300 hover:text-white border border-slate-700 bg-slate-900 px-3 py-1.5 rounded-lg shadow-sm transition"
                   >
                     Acknowledge
                   </button>
@@ -382,99 +390,96 @@ const AirTicketing = () => {
           </div>
         </motion.div>
 
-        {/* TRENDING SECTORS DIRECTORY */}
+        {/* TRENDING SECTORS STORAGE */}
         <div className="space-y-6">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Trending International Sectors</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">Estimated seasonal market benchmarks based on direct IATA clearance indicators from our desk.</p>
+            <h2 className="text-2xl font-bold text-white">Trending International Sectors</h2>
+            <p className="text-sm text-slate-400 mt-1">Estimated seasonal market benchmarks based on direct IATA clearance indicators from our desk.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {diagnosticFares.map((fare, i) => (
               <motion.div
                 key={i}
                 variants={itemVariants}
-                className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/60 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all"
+                className="bg-slate-800/60 border border-slate-700/50 rounded-2xl p-6 flex flex-col justify-between shadow-lg"
               >
                 <div>
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">{fare.airline}</span>
-                  <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2">{fare.sector}</h3>
-                  <p className="text-lg font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">
+                  <h3 className="font-bold text-base text-white mb-2">{fare.sector}</h3>
+                  <p className="text-lg font-extrabold text-slate-200 tracking-tight">
                     {fare.benchmarkPrice}
                   </p>
                 </div>
-                <div className="border-t border-slate-100 dark:border-slate-700/60 pt-3 mt-3">
-                  <p className="text-xs text-slate-500 dark:text-slate-400 italic">{fare.terms}</p>
+                <div className="border-t border-slate-700/60 pt-3 mt-4">
+                  <p className="text-xs text-slate-400 italic leading-relaxed">{fare.terms}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* REASONS & TRAVEL SERVICES */}
+        {/* CORPORATE DISPATCH ADVANTAGES */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((svc, i) => (
             <motion.div 
               key={i}
               variants={itemVariants}
-              className="p-6 bg-white dark:bg-slate-800/80 border border-slate-100 dark:border-slate-700/50 rounded-2xl shadow-sm transition-all hover:shadow-md"
+              className="p-6 bg-slate-800/50 border border-slate-700/40 rounded-2xl shadow-lg transition-all"
             >
-              <div className="w-12 h-12 bg-slate-100 dark:bg-slate-700 rounded-xl flex items-center justify-center mb-4 text-slate-800 dark:text-slate-200">
-                <svc.icon className="h-6 w-6" />
+              <div className="w-12 h-12 bg-slate-700/60 rounded-xl flex items-center justify-center mb-4 text-slate-200">
+                <svc.icon className="h-5 w-5" />
               </div>
-              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">{svc.title}</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{svc.desc}</p>
+              <h3 className="font-bold text-base text-white mb-2">{svc.title}</h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">{svc.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* TWO-COLUMN CONTACT & MAP INFO */}
+        {/* TWO-COLUMN CONTACT GRID & EMBED MAPS */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Information Card */}
           <motion.div variants={itemVariants}>
             <motion.div 
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 h-full border border-slate-100 dark:border-transparent transition-colors duration-300"
-              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+              className="bg-slate-800 rounded-2xl shadow-2xl p-8 h-full border border-slate-700/40"
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+              <h2 className="text-2xl font-bold text-white mb-3">
                 Let's Plan Your Journey
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 mb-8">
+              <p className="text-sm text-slate-400 mb-8 leading-relaxed">
                 Skip long queues and online automated errors. Reach out to our specialized travel consultants directly via hotline, email, or by coming to our Gulshan office.
               </p>
 
-              {/* Contact Info Cards */}
               <div className="space-y-6 mb-8">
                 {contactInfo.map((item, index) => (
                   <motion.div 
                     key={index} 
-                    className="flex items-start group"
-                    whileHover={{ x: 5 }}
+                    className="flex items-start"
+                    whileHover={{ x: 3 }}
                   >
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center shadow-md`}>
-                      <item.icon className="h-5 w-5 text-white" />
+                    <div className={`flex-shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-md border border-slate-600/40`}>
+                      <item.icon className="h-4 w-4 text-slate-200" />
                     </div>
                     <div className="ml-4">
-                      <h3 className="font-semibold text-slate-900 dark:text-white">{item.title}</h3>
-                      <p className="text-slate-700 dark:text-slate-200 font-medium break-all">{item.details}</p>
-                      <p className="text-slate-500 dark:text-slate-400 text-sm">{item.description}</p>
+                      <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">{item.title}</h3>
+                      <p className="text-white font-semibold text-sm sm:text-base mt-0.5 break-all">{item.details}</p>
+                      <p className="text-slate-400 text-xs mt-0.5">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Social Links */}
-              <div>
-                <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Follow Raima International</h3>
-                <div className="flex space-x-4">
+              <div className="border-t border-slate-700/60 pt-6">
+                <h3 className="font-semibold text-slate-300 text-sm uppercase tracking-wider mb-4">Follow Raima International</h3>
+                <div className="flex space-x-3">
                   {socialLinks.map((social, index) => (
                     <motion.a
                       key={index}
                       href={social.href}
-                      className={`w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 ${social.color} transition-all duration-300 shadow-sm`}
-                      whileHover={{ scale: 1.15, y: -2 }}
-                      whileTap={{ scale: 0.9 }}
+                      className={`w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 ${social.color} border border-slate-700 transition-all shadow-inner`}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      <social.icon className="h-5 w-5" />
+                      <social.icon className="h-4 w-4" />
                     </motion.a>
                   ))}
                 </div>
@@ -482,50 +487,47 @@ const AirTicketing = () => {
             </motion.div>
           </motion.div>
 
-          {/* Google Map Card */}
           <motion.div variants={itemVariants}>
             <motion.div 
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 border border-slate-100 dark:border-transparent transition-colors duration-300 h-full"
-              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+              className="bg-slate-800 rounded-2xl shadow-2xl p-8 border border-slate-700/40 h-full"
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
             >
               <div className="mb-6">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Find Us in Dhaka</h2>
-                <p className="text-slate-600 dark:text-slate-300">Visit our corporate desk for physical seat verifications and document drops.</p>
+                <h2 className="text-2xl font-bold text-white mb-1">Find Us in Dhaka</h2>
+                <p className="text-sm text-slate-400">Visit our corporate desk for physical seat verifications and document drops.</p>
               </div>
 
-              <div className="relative rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-transparent">
+              <div className="relative rounded-xl overflow-hidden shadow-xl border border-slate-900">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.156381983053!2d90.4173873!3d23.7774438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77dec26a455%3A0x6b77ecb4729007f3!2sPolice%20Plaza%20Concord%20Shopping%20Mall!5e0!3m2!1sen!2sbd!4v1680000000000!5m2!1sen!2sbd"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1376313885175!2d90.4143431!3d23.7781198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7772fa8c19b%3A0xc07a3c3c1eb3df4c!2sPolice%20Plaza%20Concord%20Shopping%20Mall!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
                   width="100%"
-                  height="380"
+                  height="340"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full"
+                  className="w-full grayscale invert opacity-85 contrast-125"
                   title="Raima International Travel Office Location Map"
                 />
-                <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent" />
               </div>
 
-              {/* Additional Details */}
-              <div className="mt-6 p-4 bg-slate-100/70 dark:bg-slate-900/50 rounded-lg">
+              <div className="mt-6 p-4 bg-slate-900/60 rounded-xl border border-slate-700/50">
                 <div className="flex items-start space-x-3">
-                  <FaMapMarkerAlt className="h-5 w-5 text-slate-500 dark:text-slate-400 mt-0.5 flex-shrink-0" />
+                  <FaMapMarkerAlt className="h-5 w-5 text-slate-400 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Directions</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
+                    <h4 className="font-semibold text-slate-200 text-sm mb-0.5">Directions</h4>
+                    <p className="text-xs text-slate-400 leading-relaxed">
                       Police Plaza Concord, Tower-2 (7th Floor), Plot-2, Road-144, Gulshan-1, Dhaka-1212.
                     </p>
                     <a 
-                      href="https://maps.google.com"
+                      href="https://maps.google.com/?q=Police+Plaza+Concord+Gulshan+Dhaka"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center mt-3 text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300 text-sm font-medium transition-colors"
+                      className="inline-flex items-center mt-3 text-slate-300 hover:text-white text-xs font-bold transition-colors gap-1"
                     >
-                      Get Directions
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      <span>Get Directions</span>
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
                   </div>
@@ -534,7 +536,6 @@ const AirTicketing = () => {
             </motion.div>
           </motion.div>
         </div>
-
       </motion.div>
     </motion.div>
   );

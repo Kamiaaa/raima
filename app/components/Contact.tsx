@@ -49,36 +49,36 @@ const Contact = () => {
       title: 'Email Us',
       details: 'info@raimatravel.com.bd',
       description: 'Send us an email anytime',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     },
     {
       icon: FaPhone,
       title: 'Call Us',
       details: '+8801730068845, +880255045262',
       description: 'Sun-Thurs from 10am to 6pm',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Visit Us',
       details: 'Police Plaza Concord (7th Floor), Tower-2 Plot-2, Road-144, Gulshan-1, Dhaka-1212',
       description: 'Bangladesh',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     },
     {
       icon: FaClock,
       title: 'Office Hours',
       details: 'Sunday - Thursday',
       description: '10:00 AM - 6:00 PM BST',
-      color: 'from-slate-500 to-slate-700 dark:from-slate-600 dark:to-slate-800'
+      color: 'from-slate-600 to-slate-800'
     }
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, href: '#', color: 'hover:text-slate-600 dark:hover:text-slate-400' },
-    { icon: FaTwitter, href: '#', color: 'hover:text-slate-500 dark:hover:text-slate-300' },
-    { icon: FaFacebook, href: '#', color: 'hover:text-slate-500 dark:hover:text-slate-300' },
-    { icon: FaInstagram, href: '#', color: 'hover:text-slate-600 dark:hover:text-slate-400' }
+    { icon: FaLinkedin, href: '#', color: 'hover:text-slate-400' },
+    { icon: FaTwitter, href: '#', color: 'hover:text-slate-300' },
+    { icon: FaFacebook, href: '#', color: 'hover:text-slate-300' },
+    { icon: FaInstagram, href: '#', color: 'hover:text-slate-400' }
   ];
 
   // Animation variants with proper typing
@@ -104,7 +104,7 @@ const Contact = () => {
 
   return (
     <motion.div 
-      className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+      className="min-h-screen bg-slate-900 text-white transition-colors duration-300"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -130,11 +130,11 @@ const Contact = () => {
               variants={itemVariants}
             >
               <motion.div 
-                className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 h-full transition-colors duration-300"
+                className="bg-slate-800 rounded-2xl shadow-2xl p-8 h-full transition-colors duration-300"
                 whileHover={{ y: -5, transition: { duration: 0.3 } }}
               >
                 <motion.h2 
-                  className="text-2xl font-bold text-slate-900 dark:text-white mb-8"
+                  className="text-2xl font-bold text-white mb-8"
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 }}
@@ -142,7 +142,7 @@ const Contact = () => {
                   Let's Talk
                 </motion.h2>
                 <motion.p 
-                  className="text-slate-600 dark:text-slate-300 mb-8"
+                  className="text-slate-300 mb-8"
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.3 }}
@@ -169,9 +169,9 @@ const Contact = () => {
                         <item.icon className="h-6 w-6 text-white" />
                       </motion.div>
                       <div className="ml-4">
-                        <h3 className="font-semibold text-slate-900 dark:text-white">{item.title}</h3>
-                        <p className="text-slate-700 dark:text-white font-medium">{item.details}</p>
-                        <p className="text-slate-500 dark:text-slate-400 text-sm">{item.description}</p>
+                        <h3 className="font-semibold text-white">{item.title}</h3>
+                        <p className="text-white font-medium">{item.details}</p>
+                        <p className="text-slate-400 text-sm">{item.description}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -183,13 +183,13 @@ const Contact = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
                 >
-                  <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Follow Us</h3>
+                  <h3 className="font-semibold text-white mb-4">Follow Us</h3>
                   <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
                       <motion.a
                         key={index}
                         href={social.href}
-                        className={`w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 ${social.color} transition-all duration-300 shadow-sm dark:shadow-none`}
+                        className={`w-10 h-10 rounded-lg bg-slate-700 flex items-center justify-center text-slate-300 ${social.color} transition-all duration-300`}
                         whileHover={{ scale: 1.2, y: -3 }}
                         whileTap={{ scale: 0.9 }}
                         initial={{ opacity: 0, scale: 0 }}
@@ -209,7 +209,7 @@ const Contact = () => {
               variants={itemVariants}
             >
               <motion.div 
-                className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 transition-colors duration-300 h-full"
+                className="bg-slate-800 rounded-2xl shadow-2xl p-8 transition-colors duration-300 h-full"
                 whileHover={{ y: -5, transition: { duration: 0.3 } }}
               >
                 <motion.div 
@@ -218,12 +218,12 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Find Us Here</h2>
-                  <p className="text-slate-600 dark:text-slate-300">Visit our office at the following location</p>
+                  <h2 className="text-2xl font-bold text-white mb-2">Find Us Here</h2>
+                  <p className="text-slate-300">Visit our office at the following location</p>
                 </motion.div>
 
                 <motion.div 
-                  className="relative rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-transparent"
+                  className="relative rounded-xl overflow-hidden shadow-lg border border-transparent"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
@@ -247,23 +247,23 @@ const Contact = () => {
 
                 {/* Additional Location Info */}
                 <motion.div 
-                  className="mt-6 p-4 bg-slate-100/70 dark:bg-slate-900/50 rounded-lg transition-colors duration-300"
+                  className="mt-6 p-4 bg-slate-900/50 rounded-lg transition-colors duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
                 >
                   <div className="flex items-start space-x-3">
-                    <FaMapMarkerAlt className="h-5 w-5 text-slate-500 dark:text-slate-400 mt-0.5 flex-shrink-0" />
+                    <FaMapMarkerAlt className="h-5 w-5 text-slate-400 mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white mb-1">Directions</h4>
-                      <p className="text-sm text-slate-600 dark:text-slate-300">
+                      <h4 className="font-semibold text-white mb-1">Directions</h4>
+                      <p className="text-sm text-slate-300">
                         Police Plaza Concord (7th Floor), Tower-2 Plot-2, Road-144, Gulshan-1, Dhaka-1212, Bangladesh
                       </p>
                       <a 
                         href="https://maps.google.com/?q=Police+Plaza+Concord+Gulshan+Dhaka"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center mt-3 text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300 text-sm font-medium transition-colors"
+                        className="inline-flex items-center mt-3 text-slate-400 hover:text-slate-300 text-sm font-medium transition-colors"
                       >
                         Get Directions
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -281,13 +281,13 @@ const Contact = () => {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  <div className="text-center p-3 bg-slate-100 dark:bg-slate-700/50 rounded-lg transition-colors duration-300">
-                    <div className="text-slate-800 dark:text-slate-300 font-semibold text-sm mb-1">Parking</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">Ample parking available</div>
+                  <div className="text-center p-3 bg-slate-700/50 rounded-lg transition-colors duration-300">
+                    <div className="text-slate-300 font-semibold text-sm mb-1">Parking</div>
+                    <div className="text-xs text-slate-400">Ample parking available</div>
                   </div>
-                  <div className="text-center p-3 bg-slate-100 dark:bg-slate-700/50 rounded-lg transition-colors duration-300">
-                    <div className="text-slate-800 dark:text-slate-300 font-semibold text-sm mb-1">Public Transport</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">Metro & bus nearby</div>
+                  <div className="text-center p-3 bg-slate-700/50 rounded-lg transition-colors duration-300">
+                    <div className="text-slate-300 font-semibold text-sm mb-1">Public Transport</div>
+                    <div className="text-xs text-slate-400">Metro & bus nearby</div>
                   </div>
                 </motion.div>
               </motion.div>

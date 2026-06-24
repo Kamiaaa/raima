@@ -66,11 +66,10 @@ interface TopFeaturesProps {
 }
 
 // Feature Card Component
-// Feature Card Component
 function FeatureCard({ feature, index }: FeatureCardProps) {
   return (
     <div
-      className="group relative h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg"
+      className="group relative h-full bg-slate-800 rounded-2xl overflow-hidden shadow-lg"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {/* Image Container */}
@@ -84,11 +83,11 @@ function FeatureCard({ feature, index }: FeatureCardProps) {
         />
 
         {/* Subtle hover overlay */}
-        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
         {/* Gradient overlay */}
         <div
-          className={`absolute inset-0 bg-linear-to-t ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+          className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
         />
 
         {/* Title + Explore (Justified between) */}
@@ -107,34 +106,33 @@ function FeatureCard({ feature, index }: FeatureCardProps) {
       </div>
 
       {/* Hover Border Effect */}
-      <div className="absolute inset-0 border-2 border-transparent group-hover:border-gray-200 dark:group-hover:border-gray-700 rounded-2xl transition-all duration-500 pointer-events-none" />
+      <div className="absolute inset-0 border-2 border-transparent group-hover:border-slate-700 rounded-2xl transition-all duration-500 pointer-events-none" />
 
       {/* Glow Effect */}
       <div
-        className={`absolute inset-0 rounded-2xl bg-linear-to-r ${feature.gradient} opacity-0 group-hover:opacity-5 blur-xl transition-opacity duration-500 pointer-events-none`}
+        className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-5 blur-xl transition-opacity duration-500 pointer-events-none`}
       />
     </div>
   );
 }
 
 // Main Component
-export default function TopContries({
+export default function TopCountries({
   title = "Desired Vacation Country",
-  description = "Discover our premium offerings designed to elevate your experience with cutting-edge technology and innovation.",
 }: TopFeaturesProps) {
   return (
-    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl tracking-tight font-source text-gray-900 dark:text-white sm:text-3xl md:text-5xl mb-4">
+          <h2 className="text-2xl tracking-tight font-source text-white sm:text-3xl md:text-5xl mb-4">
             {title}
           </h2>
 
           <div className="relative inline-block">
             <div className="relative inline-block">
-              <div className="w-24 h-1 bg-orange-500 dark:bg-orange-400 rounded-full mb-1 mx-auto"></div>
-              <div className="w-16 h-1 bg-orange-500 dark:bg-orange-400 rounded-full mx-auto"></div>
+              <div className="w-24 h-1 bg-orange-400 rounded-full mb-1 mx-auto"></div>
+              <div className="w-16 h-1 bg-orange-400 rounded-full mx-auto"></div>
             </div>
           </div>
         </div>

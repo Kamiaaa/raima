@@ -93,10 +93,10 @@ function HeroSection({ title, description }: { title: string; description: strin
 
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
           {title}
         </h1>
-        <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto font-light">
           {description}
         </p>
       </div>
@@ -123,7 +123,6 @@ const Umrah = () => {
     }
   };
 
-  // Quick anchor scroll behavior for the CTAs
   const scrollToContact = () => {
     const element = document.getElementById('contact-cta');
     if (element) {
@@ -133,7 +132,7 @@ const Umrah = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300"
+      className="min-h-screen bg-slate-900 text-slate-100 transition-colors duration-300 overflow-x-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -160,38 +159,38 @@ const Umrah = () => {
                 key={idx}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className={`relative bg-slate-100 dark:bg-slate-800/90 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-700/80 flex flex-col justify-between text-slate-800 dark:text-white ${
-                  pkg.isFeatured ? 'ring-4 ring-orange-400 dark:ring-orange-500 scale-100 lg:scale-105 z-10' : ''
+                className={`relative bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-700/80 flex flex-col justify-between text-white ${
+                  pkg.isFeatured ? 'ring-4 ring-orange-500 scale-100 lg:scale-105 z-10' : ''
                 }`}
               >
                 {pkg.isFeatured && (
-                  <span className="absolute top-0 right-8 transform -translate-y-1/2 bg-orange-400 dark:bg-orange-500 text-slate-900 font-extrabold px-4 py-1 rounded-full text-xs uppercase tracking-wide shadow-sm">
+                  <span className="absolute top-0 right-8 transform -translate-y-1/2 bg-orange-500 text-slate-950 font-extrabold px-4 py-1 rounded-full text-xs uppercase tracking-wide shadow-md">
                     Most Popular
                   </span>
                 )}
 
                 <div>
-                  <h3 className="text-xl font-black tracking-wider text-blue-900 dark:text-orange-400 mb-4">
+                  <h3 className="text-xl font-bold tracking-wider text-orange-400 mb-4">
                     {pkg.title}
                   </h3>
 
                   {/* Meta Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-white text-xs px-2.5 py-1 rounded-md font-semibold">
+                    <span className="bg-slate-700 text-white text-xs px-2.5 py-1 rounded-md font-semibold border border-slate-600/30">
                       🏢 {pkg.hotelRating}
                     </span>
-                    <span className="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-white text-xs px-2.5 py-1 rounded-md font-semibold">
+                    <span className="bg-slate-700 text-white text-xs px-2.5 py-1 rounded-md font-semibold border border-slate-600/30">
                       📍 Haram: {pkg.distance}
                     </span>
                   </div>
 
-                  <hr className="border-slate-300 dark:border-slate-700 mb-6" />
+                  <hr className="border-slate-700 mb-6" />
 
                   {/* Features */}
-                  <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-200">
+                  <ul className="space-y-3 text-sm text-slate-300">
                     {pkg.features.map((feature, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
-                        <FaCheckCircle className="w-4 h-4 text-orange-500 dark:text-orange-400 shrink-0 mt-0.5" />
+                        <FaCheckCircle className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
                         <span className="leading-tight">{feature}</span>
                       </li>
                     ))}
@@ -203,8 +202,8 @@ const Umrah = () => {
                     onClick={scrollToContact}
                     className={`w-full py-3 px-4 rounded-xl font-bold tracking-wide transition-all shadow-md ${
                       pkg.isFeatured
-                        ? 'bg-orange-400 text-slate-900 hover:bg-orange-300 dark:bg-orange-500 dark:hover:bg-orange-400'
-                        : 'bg-blue-900 text-white hover:bg-blue-800 dark:bg-slate-700 dark:text-white dark:hover:bg-slate-600'
+                        ? 'bg-orange-500 text-slate-950 hover:bg-orange-400'
+                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'
                     }`}
                   >
                     Enquire Package Details
@@ -219,7 +218,7 @@ const Umrah = () => {
         <motion.div 
           id="contact-cta"
           variants={itemVariants} 
-          className="bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-2xl text-center border border-slate-700 max-w-4xl mx-auto"
+          className="bg-slate-800 text-white rounded-2xl p-8 md:p-12 shadow-2xl text-center border border-slate-700 max-w-4xl mx-auto"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Ready to Begin Your Sacred Journey?</h2>
           <p className="text-slate-300 max-w-xl mx-auto mb-8 text-sm md:text-base">
@@ -227,33 +226,33 @@ const Umrah = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left border-t border-slate-700 pt-8">
-            <a href="tel:+8801730068845" className="flex items-center gap-4 group p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
+            <a href="tel:+8801730068845" className="flex items-center gap-4 group p-3 rounded-lg hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-700">
               <div className="p-3 bg-orange-400/10 text-orange-400 rounded-xl group-hover:scale-110 transition-transform">
                 <FaPhone className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-medium">Call Agents</p>
+                <p className="text-xs text-slate-500 font-medium">Call Agents</p>
                 <p className="text-sm font-bold tracking-wide text-white">+880 1730 068845</p>
               </div>
             </a>
 
-            <a href="mailto:info@raimatravel.com.bd" className="flex items-center gap-4 group p-3 rounded-lg hover:bg-slate-800/50 transition-colors">
+            <a href="mailto:info@raimatravel.com.bd" className="flex items-center gap-4 group p-3 rounded-lg hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-700">
               <div className="p-3 bg-orange-400/10 text-orange-400 rounded-xl group-hover:scale-110 transition-transform">
                 <FaEnvelope className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-medium">Email Inquiry</p>
+                <p className="text-xs text-slate-500 font-medium">Email Inquiry</p>
                 <p className="text-sm font-bold tracking-wide text-white break-all">info@raimatravel.com.bd</p>
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-3">
+            <div className="flex items-center gap-4 p-3 rounded-lg">
               <div className="p-3 bg-orange-400/10 text-orange-400 rounded-xl">
                 <FaMapMarkerAlt className="w-5 h-5" />
               </div>
               <div>
-                <p className="text-xs text-slate-400 font-medium">Our Corporate Desk</p>
-                <p className="text-xs font-semibold text-slate-200 leading-tight">Police Plaza Concord, Gulshan-1, Dhaka</p>
+                <p className="text-xs text-slate-500 font-medium">Our Corporate Desk</p>
+                <p className="text-xs font-semibold text-slate-300 leading-tight">Police Plaza Concord, Gulshan-1, Dhaka</p>
               </div>
             </div>
           </div>

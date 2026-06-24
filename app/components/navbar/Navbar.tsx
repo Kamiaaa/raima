@@ -74,6 +74,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: aboutUsDropdown.name, href: '#', isDropdown: true, dropdownData: aboutUsDropdown },
     { name: servicesDropdown.name, href: '#', isDropdown: true, dropdownData: servicesDropdown },
+    { name: 'Packages', href: '/packages' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -111,7 +112,7 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg sticky top-0 z-50">
+    <nav className="bg-linear-to-r from-slate-900 via-slate-800 to-slate-900 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo - Left aligned - Responsive sizing for mobile */}
@@ -245,7 +246,7 @@ const Navbar = () => {
         {/* Sliding Menu */}
         <div
           className={`
-            fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 
+            fixed top-0 left-0 h-full w-80 bg-linear-to-b from-slate-900 via-slate-800 to-slate-900 
             shadow-2xl z-50 transition-transform duration-300 ease-out
             md:hidden
             ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}

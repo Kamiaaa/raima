@@ -5,7 +5,6 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { 
   FaCompass, 
-  FaGlobe, 
   FaEye, 
   FaFlag, 
   FaLightbulb, 
@@ -28,7 +27,6 @@ function HeroSection({ title, description }: { title: string; description: strin
           priority
         />
         {/* Deep Overlay containing brand theme matching original blend */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 to-orange-500/80 mix-blend-multiply" />
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
@@ -88,7 +86,7 @@ const MissionVisionPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden">
+    <div className="min-h-screen bg-slate-900 text-slate-100 transition-colors duration-300 overflow-x-hidden">
       
       {/* Reusable Core Hero Component */}
       <HeroSection 
@@ -111,21 +109,21 @@ const MissionVisionPage = () => {
           {/* Mission Segment */}
           <motion.div 
             variants={itemVariants}
-            className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700/50 p-8 flex flex-col justify-between"
+            className="bg-slate-800 rounded-2xl shadow-xl border border-slate-700/50 p-8 flex flex-col justify-between"
           >
             <div className="space-y-6">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 text-white flex items-center justify-center shadow-lg">
                 <FaFlag className="h-6 w-6" />
               </div>
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400">The Purpose</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Our Mission</h2>
+                <span className="text-xs font-bold uppercase tracking-widest text-orange-400">The Purpose</span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Mission</h2>
               </div>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 To engineer seamless, transformative, and safe global journeys that comfortably connect individuals with diverse cultures and pristine natural spaces. By removing operational travel complexities, we aim to deliver exceptional flight ticketing architectures, specialized documentation care, and bespoke itinerary management that leaves travelers free to acquire authentic lifetime memories.
               </p>
             </div>
-            <div className="mt-8 border-t border-slate-100 dark:border-slate-700/50 pt-4 text-xs text-slate-400 dark:text-slate-500 font-medium">
+            <div className="mt-8 border-t border-slate-700/50 pt-4 text-xs text-slate-500 font-medium">
               Target Framework: Accessible Global Connectivity
             </div>
           </motion.div>
@@ -133,21 +131,21 @@ const MissionVisionPage = () => {
           {/* Vision Segment */}
           <motion.div 
             variants={itemVariants}
-            className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700/50 p-8 flex flex-col justify-between"
+            className="bg-slate-800 rounded-2xl shadow-xl border border-slate-700/50 p-8 flex flex-col justify-between"
           >
             <div className="space-y-6">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center shadow-lg border border-slate-700">
+              <div className="w-14 h-14 rounded-2xl bg-slate-950 text-white flex items-center justify-center shadow-lg border border-slate-700">
                 <FaEye className="h-6 w-6 text-orange-400" />
               </div>
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-400">The Blueprint</span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Our Vision</h2>
+                <span className="text-xs font-bold uppercase tracking-widest text-orange-400">The Blueprint</span>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Vision</h2>
               </div>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
+              <p className="text-slate-300 leading-relaxed text-base sm:text-lg">
                 To become South Asia's premier choice for highly trusted, modern travel services. We visualize a future where modern automated booking mechanics and highly individualized hospitality seamlessly integrate. Our long-term trajectory focuses on cultivating a world-class travel model that sparks active global citizenship while driving direct economic benefit to localized ecosystems worldwide.
               </p>
             </div>
-            <div className="mt-8 border-t border-slate-100 dark:border-slate-700/50 pt-4 text-xs text-slate-400 dark:text-slate-500 font-medium">
+            <div className="mt-8 border-t border-slate-700/50 pt-4 text-xs text-slate-500 font-medium">
               Target Framework: Progressive International Travel Standards
             </div>
           </motion.div>
@@ -163,7 +161,7 @@ const MissionVisionPage = () => {
             src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1035"
             alt="Global exploration blueprint background"
             fill
-            className="object-cover opacity-90 dark:opacity-75"
+            className="object-cover opacity-75"
           />
           <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-[1px]" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 max-w-3xl mx-auto space-y-4">
@@ -180,7 +178,7 @@ const MissionVisionPage = () => {
         {/* Core Pillars Grid */}
         <div className="space-y-12">
           <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
               The Guiding Strategic Pillars
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mx-auto mt-3" />
@@ -192,16 +190,16 @@ const MissionVisionPage = () => {
                 key={pillar.title}
                 variants={itemVariants}
                 whileHover={{ y: -4 }}
-                className="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700/50 flex gap-4 sm:gap-6 items-start"
+                className="bg-slate-800 p-6 sm:p-8 rounded-2xl shadow-md border border-slate-700/50 flex gap-4 sm:gap-6 items-start"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-50 dark:bg-slate-900 flex items-center justify-center text-orange-600 dark:text-orange-400 border border-orange-100/30 dark:border-slate-700">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center text-orange-400 border border-slate-700">
                   <pillar.icon className="h-5 w-5" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                  <h3 className="text-lg font-bold text-white">
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  <p className="text-sm text-slate-400 leading-relaxed">
                     {pillar.desc}
                   </p>
                 </div>

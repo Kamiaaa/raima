@@ -162,11 +162,9 @@ const DEFAULT_REQUIREMENTS = [
   "Detailed Forwarding Letter / Complete Travel Itinerary Justification"
 ];
 
-// Hero Section Component matching shared application layout design
 function HeroSection({ title, description }: { title: string; description: string }) {
   return (
     <div className="relative h-[40vh] min-h-65 w-full overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/img/page-back.png"
@@ -175,11 +173,9 @@ function HeroSection({ title, description }: { title: string; description: strin
           className="object-cover"
           priority
         />
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bail text-white mb-4">
           {title}
@@ -193,7 +189,6 @@ function HeroSection({ title, description }: { title: string; description: strin
 }
 
 const VisaService = () => {
-  // Form State
   const [country, setCountry] = useState('');
   const [visaType, setVisaType] = useState('Tourist Visa');
   const [employmentStatus, setEmploymentStatus] = useState('Business Owner / Proprietor');
@@ -251,7 +246,6 @@ const VisaService = () => {
     { icon: FaCheckCircle, title: 'High Approval Rate', desc: 'A meticulously audited assessment process ensures zero silly clerical submission mistakes.' }
   ];
 
-  // Animation variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -271,12 +265,8 @@ const VisaService = () => {
 
   const handleVisaSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Resolve targeted data items
     const visaCategoryMatch = VISA_REQUIREMENTS_DB[visaType];
     const exactChecklist = visaCategoryMatch ? visaCategoryMatch[employmentStatus] : null;
-    
-    // Set matching result layout or default fallback options
     setGeneratedRequirements(exactChecklist || DEFAULT_REQUIREMENTS);
   };
 
@@ -287,13 +277,11 @@ const VisaService = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Standardized Global Hero Section */}
       <HeroSection 
         title="Professional Visa Logistics & Consultation"
         description="Navigate complex global consulates with ease. Raima International Travel provides reliable document evaluation, file mapping, and invitation auditing for international visas."
       />
 
-      {/* Main Content Layout */}
       <motion.div 
         className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16"
         variants={containerVariants}
@@ -301,11 +289,8 @@ const VisaService = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
       >
-        
-        {/* INTERACTIVE VISA REQUIREMENTS LOOKUP WIDGET */}
         <motion.div variants={itemVariants} className="w-full">
           <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700/50">
-            {/* Widget Header tabs */}
             <div className="bg-slate-900 px-6 py-4 flex flex-wrap gap-4 justify-between items-center">
               <div className="flex items-center space-x-2 text-white">
                 <FaPassport className="text-slate-400 h-5 w-5" />
@@ -316,7 +301,6 @@ const VisaService = () => {
               </div>
             </div>
 
-            {/* Visa Form Fields */}
             <form onSubmit={handleVisaSearch} className="p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Destination Country</label>
@@ -380,7 +364,6 @@ const VisaService = () => {
               </div>
             </form>
 
-            {/* DYNAMIC CHECKLIST DISPLAY RESULTS */}
             {generatedRequirements && (
               <motion.div 
                 initial={{ opacity: 0, height: 0 }}
@@ -429,7 +412,6 @@ const VisaService = () => {
           </div>
         </motion.div>
 
-        {/* RECOGNIZED VISA PROCESSING DIRECTORY */}
         <div className="space-y-6">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white">High-Demand Visa Operations</h2>
@@ -458,7 +440,6 @@ const VisaService = () => {
           </div>
         </div>
 
-        {/* LOGISTICAL STRENGTH METRICS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {coreStrengths.map((strength, i) => (
             <motion.div 
@@ -475,9 +456,7 @@ const VisaService = () => {
           ))}
         </div>
 
-        {/* TWO-COLUMN CONTACT & MAP INFO */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Information Card */}
           <motion.div variants={itemVariants}>
             <motion.div 
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 h-full border border-slate-100 dark:border-transparent transition-colors duration-300"
@@ -490,7 +469,6 @@ const VisaService = () => {
                 Consulate submission deadlines require absolute attention to physical criteria. Contact our operational desk directly or schedule an office consultation for final file reviews.
               </p>
 
-              {/* Contact Info Cards */}
               <div className="space-y-6 mb-8">
                 {contactInfo.map((item, index) => (
                   <motion.div 
@@ -510,7 +488,6 @@ const VisaService = () => {
                 ))}
               </div>
 
-              {/* Social Links */}
               <div>
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-4">Follow Raima International</h3>
                 <div className="flex space-x-4">
@@ -530,7 +507,6 @@ const VisaService = () => {
             </motion.div>
           </motion.div>
 
-          {/* Google Map Card */}
           <motion.div variants={itemVariants}>
             <motion.div 
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 border border-slate-100 dark:border-transparent transition-colors duration-300 h-full"
@@ -543,7 +519,7 @@ const VisaService = () => {
 
               <div className="relative rounded-xl overflow-hidden shadow-lg border border-slate-100 dark:border-transparent">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.156381983053!2d90.4173873!3d23.7774438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c77dec26a455%3A0x6b77ecb4729007f3!2sPolice%20Plaza%20Concord%20Shopping%20Mall!5e0!3m2!1sen!2sbd!4v1680000000000!5m2!1sen!2sbd"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.152541349522!2d90.4149673!3d23.777572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7774e5b22b7%3A0x6b10a2f4cfedbf82!2sPolice%20Plaza%20Concord%20Shopping%20Mall!5e0!3m2!1sen!2sbd!4v1625000000000!5m2!1sen!2sbd"
                   width="100%"
                   height="380"
                   style={{ border: 0 }}
@@ -556,7 +532,6 @@ const VisaService = () => {
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent" />
               </div>
 
-              {/* Additional Details */}
               <div className="mt-6 p-4 bg-slate-100/70 dark:bg-slate-900/50 rounded-lg">
                 <div className="flex items-start space-x-3">
                   <FaMapMarkerAlt className="h-5 w-5 text-slate-500 dark:text-slate-400 mt-0.5 flex-shrink-0" />
@@ -566,7 +541,7 @@ const VisaService = () => {
                       Police Plaza Concord, Tower-2 (7th Floor), Plot-2, Road-144, Gulshan-1, Dhaka-1212.
                     </p>
                     <a 
-                      href="https://maps.google.com"
+                      href="https://maps.google.com/?q=Police+Plaza+Concord+Gulshan+Dhaka"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center mt-3 text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300 text-sm font-medium transition-colors"
